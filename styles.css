@@ -1,0 +1,331 @@
+/* styles.css */
+
+/* Estilos gerais do corpo */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9; /* Cor de fundo suave */
+    color: #333; /* Cor de texto padrão */
+}
+
+/* Container da página */
+.page-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Título da página */
+h2 {
+    font-size: 2rem;
+    color: #2980b9;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #1A242F; /* Azul escuro */
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #ecf0f1; /* Branco claro */
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #3498db; /* Azul */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+/* Tabela com design moderno */
+table.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+/* Adicionando um wrapper para o scroll horizontal */
+.modern-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Estilo das células e cabeçalhos da tabela */
+table.modern-table th,
+table.modern-table td {
+    padding: 12px;
+    font-size: 0.9rem; /* Fonte menor */
+}
+
+table.modern-table th {
+    background-color: #3498db;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    cursor: pointer; /* Indica que o cabeçalho pode ser clicado */
+}
+
+table.modern-table th.sorted-asc::after {
+    content: " 🔼"; /* Ícone de seta para cima */
+}
+
+table.modern-table th.sorted-desc::after {
+    content: " 🔽"; /* Ícone de seta para baixo */
+}
+
+table.modern-table tr:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+table.modern-table tr:hover {
+    background-color: #dfe6e9;
+    transform: translateY(-3px); /* Levanta a linha ao passar o mouse */
+    transition: all 0.2s ease;
+}
+
+table.modern-table td {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+table.modern-table td:hover {
+    background-color: #dfe6e9; /* Destaca a célula ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o tamanho da célula ao passar o mouse */
+}
+
+table.modern-table td:first-child {
+    font-weight: bold; /* Destaque na primeira coluna */
+}
+
+/* Efeito de borda arredondada e sombra para a tabela */
+table.modern-table {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Páginas com containers de conteúdo */
+.page-container {
+    background-color: #ffffff;
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 3rem 2rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+/* Títulos */
+.page-container h2 {
+    font-size: 2.5rem;
+    color: #3498db; /* Azul */
+    margin-bottom: 1.5rem;
+    animation: slideIn 1s ease-out;
+}
+
+.page-container p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Formulários */
+.page-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.page-form label {
+    font-size: 1.1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.page-form input,
+.page-form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #f5f5f5;
+    color: #333;
+    margin-top: 0.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.page-form input:focus,
+.page-form textarea:focus {
+    border-color: #3498db; /* Azul */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.page-form button {
+    padding: 1rem 2rem;
+    background-color: #2980b9; /* Azul */
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px; /* Bordas arredondadas no botão */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.page-form button:hover {
+    background-color: #1F78A1; /* Azul mais escuro */
+}
+
+.page-form button:active {
+    transform: translateY(1px); /* Efeito ao clicar */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.8)), url('https://via.placeholder.com/1920x600') center/cover no-repeat;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    animation: slideIn 1s ease-out;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.search-form input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 300px;
+    transition: all 0.3s ease;
+}
+
+.search-form input:focus {
+    border-color: #3498db; /* Azul */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.search-form button {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    background-color: #2980b9; /* Azul */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #1F78A1; /* Azul mais escuro */
+}
+
+/* Rodapé */
+footer {
+    background-color: #1A242F; /* Azul escuro */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer .social-icons {
+    margin-top: 0.5rem;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Paginação */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.pagination button {
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #1F78A1;
+}
